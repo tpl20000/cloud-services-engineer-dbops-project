@@ -20,7 +20,7 @@ jobs:
     - name: Perform Flyway migrations
       run: |
         flyway migrate \
-          -url=jdbc:postgresql://${{ secrets.DB_HOST }}:${{ secrets.DB_PORT }} \
+          -url=jdbc:postgresql://${{ secrets.DB_HOST }}:${{ secrets.DB_PORT }}/postgres \
           -user=${{ secrets.DB_USER }} \
           -password=${{ secrets.DB_PASSWORD }} \
           -locations=filesystem:./migrations
