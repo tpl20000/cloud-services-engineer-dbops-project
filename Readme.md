@@ -3,7 +3,7 @@
 
 Выполненные запросы psql для создания пользователя:
 
-CREATE USER store_user WITH PASSWORD 'storeuserpassword';
+CREATE USER store_user WITH PASSWORD storeuserpassword;
 GRANT CONNECT ON DATABASE store TO store_user;
 GRANT SELECT ON DATABASE store TO store_user;
 GRANT INSERT ON DATABASE store TO store_user;
