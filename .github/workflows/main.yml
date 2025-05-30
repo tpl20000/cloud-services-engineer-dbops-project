@@ -24,6 +24,7 @@ jobs:
 
     - name: Start PostgreSQL Database
       run: |
+        sudo docker prune
         sudo docker-compose up -d
     
     - name: Perform Flyway migrations
