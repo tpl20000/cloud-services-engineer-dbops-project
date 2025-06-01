@@ -10,4 +10,3 @@ ALTER TABLE product
 ADD COLUMN IF NOT EXISTS price double precision;
 ALTER TABLE order_product
 ADD FOREIGN KEY (product_id) REFERENCES product(id);
-
