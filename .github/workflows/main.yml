@@ -25,8 +25,7 @@ jobs:
     - name: Start PostgreSQL Database
       run: |
         sudo docker-compose up -d
-        sudo chmod +x grant-user.sh
-        ./grant-user.sh
+        psql -h localhost -U postgres -c "CREATE USER store_user WITH PASSWORD storeuserpassword; GRANT ALL PRIVILEGES ON DATABASE store to store_user;"
     
     - name: Perform Flyway migrations
       env:
