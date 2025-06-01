@@ -25,6 +25,8 @@ jobs:
     - name: Start PostgreSQL Database
       run: |
         sudo docker-compose up -d
+        sudo chmod +x grant-user.sh
+        ./grant-user.sh
     
     - name: Perform Flyway migrations
       env:
