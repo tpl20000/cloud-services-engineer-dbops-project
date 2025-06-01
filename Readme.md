@@ -12,11 +12,7 @@ Docker и Docker-Compose
 # Выполненные запросы psql для создания пользователя:
 ```
 CREATE USER store_user WITH PASSWORD storeuserpassword;
-GRANT CONNECT ON DATABASE store TO store_user;
-GRANT SELECT ON DATABASE store TO store_user;
-GRANT INSERT ON DATABASE store TO store_user;
-GRANT UPDATE ON DATABASE store TO store_user;
-GRANT DELETE ON DATABASE store TO store_user;
+GRANT ALL PRIVILEGES ON DATABASE store to store_user;
 ```
 
 # SQL запрос для выведения данных о продажах сосисок за предыдущую неделю
