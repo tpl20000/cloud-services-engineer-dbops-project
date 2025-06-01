@@ -22,9 +22,9 @@ jobs:
         tar -xzf flyway-commandline-11.8.2-linux-x64.tar.gz
         sudo ln -s $PWD/flyway-11.8.2/flyway /usr/local/bin/flyway
 
-    - name: Start PostgreSQL Database
-      run: |
-        sudo docker-compose up -d
+    ### - name: Start PostgreSQL Database ### Now database runs on a remote server
+    ###  run: |
+    ###    sudo docker-compose up -d
     
     - name: Perform Flyway migrations
       env:
